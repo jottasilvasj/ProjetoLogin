@@ -1,0 +1,13 @@
+create database if not exists dblogin;
+
+use dblogin;
+
+create table if not exists usuarios(
+	id int auto_increment primary key,
+    Nome varchar(50) not null,
+    Email varchar(100) not null unique,
+    SenhaHash varchar(255) not null,
+    DataCriacao datetime default current_timestamp
+);
+
+select * from usuarios;
